@@ -28,33 +28,44 @@
             app:cardCornerRadius="10dp"
             android:layout_marginBottom="30dp">
        <LinearLayout
-               android:layout_width="wrap_content"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_gravity="center"
                 android:orientation="vertical" >
-        <EditText
-                android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:hint="email or username"
-                android:textColorHint="#a59971"
-                android:id="@+id/edtEmail"/>
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="numberPassword"
-                android:textColorHint="#a59971"
-                android:ems="10"
-                android:hint="password"
-                android:id="@+id/edtPass"/>
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#384840"
+                    android:hint="email or username"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+               <com.google.android.material.textfield.TextInputEditText
+                       android:id="@+id/edtPass"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="numberPassword"
+                       android:textColor="#384840"
+                       android:hint="password"/>
+           </com.google.android.material.textfield.TextInputLayout>
        </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <com.google.android.material.button.MaterialButton
             style="@style/Theme.MaterialComponents.Light.Bridge"
             android:text="Login"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"
             app:cornerRadius="30dp"
